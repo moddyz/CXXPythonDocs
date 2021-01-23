@@ -13,7 +13,9 @@ public:
 
     /// Component-wise constructor.
     ///
-    /// \param x The x element
+    /// \param x The x element.
+    /// \param y The y element.
+    /// \param z The z element.
     inline explicit Vec3f(float x, float y, float z)
       : m_x(x)
       , m_y(y)
