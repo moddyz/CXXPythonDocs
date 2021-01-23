@@ -11,21 +11,7 @@ project(
 # Set module search paths.
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH}
                       ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
-# Apply options.
-include(Options)
-
-# Tools
-include(Tools)
-
-# Apply project defaults.
-include(Defaults)
-
-# Discover dependencies.
-include(Packages)
 
 # Add targets.
 add_subdirectory(thirdparty)
 add_subdirectory(src)
-
-# Install exported targets.
-export_project(${CMAKE_CURRENT_SOURCE_DIR}/cmake/Config.cmake.in)

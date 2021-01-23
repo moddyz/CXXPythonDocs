@@ -1,0 +1,4 @@
+build/
+*.sw[pon]
+.bak
+build.sh
