@@ -8,4 +8,3 @@ float Vec3f::DotProduct(const Vec3f& other) const
 }
 
 } // namespace cxxpythondocs
-

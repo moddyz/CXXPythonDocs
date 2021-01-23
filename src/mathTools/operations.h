@@ -14,4 +14,4 @@ namespace cxxpythondocs {
 /// \return The sum.
 int AddIntegers(int a, int b);
 
-}  // namespace cxxpythondocs
+} // namespace cxxpythondocs
