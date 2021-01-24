@@ -4,7 +4,7 @@ set(DOXYGEN_BINARY_DIR ${CMAKE_BINARY_DIR}/docs/doxygen)
 # Configure sphinx conf.py.
 set(SPHINX_BINARY_DIR ${CMAKE_BINARY_DIR}/docs/sphinx)
 configure_file(
-	conf.py.in
+    conf.py.in
     ${SPHINX_BINARY_DIR}/conf.py
 )
 
@@ -25,28 +25,28 @@ endforeach(SPHINX_INPUT)
 
 # Create sphinx command which generates the documentation.
 add_custom_command(
-	OUTPUT
+    OUTPUT
         ${SPHINX_BINARY_DIR}/build/index.html
-	COMMAND
+    COMMAND
         ${CMAKE_COMMAND} -E env "PYTHONPATH=${PROJECT_BINARY_DIR}/pylib:$ENV{PYTHONPATH}"
         ${SPHINX_EXECUTABLE} ${SPHINX_BINARY_DIR} ${SPHINX_BINARY_DIR}/build
-	WORKING_DIRECTORY
-		${CMAKE_BINARY_DIR}
-	MAIN_DEPENDENCY
+    WORKING_DIRECTORY
+        ${CMAKE_BINARY_DIR}
+    MAIN_DEPENDENCY
         ${SPHINX_BINARY_DIR}/conf.py
-	    conf.py.in
+        conf.py.in
     DEPENDS
         ${SPHINX_INPUT_TARGETS}
-	COMMENT
-		"Generating sphinx documentation."
+    COMMENT
+        "Generating sphinx documentation."
 )
 
 # Define a target which depends on the sphinx output.
 # This target is always built.
 add_custom_target(
-	sphinx_docs ALL
+    sphinx_docs ALL
     COMMAND
-	DEPENDS
+    DEPENDS
         ${SPHINX_BINARY_DIR}/build/index.html
 )
 

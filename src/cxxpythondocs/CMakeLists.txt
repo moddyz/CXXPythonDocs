@@ -15,26 +15,26 @@ set(PUBLIC_HEADERS
 )
 
 file(
-	COPY ${PUBLIC_HEADERS}
+    COPY ${PUBLIC_HEADERS}
     DESTINATION ${CMAKE_BINARY_DIR}/${CMAKE_INSTALL_INCLUDEDIR}/${LIBRARY_NAME}
 )
 
 install(
-	FILES ${PUBLIC_HEADERS}
+    FILES ${PUBLIC_HEADERS}
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/${LIBRARY_NAME}
 )
 
 # Add a new library target.
 add_library(${LIBRARY_NAME}
-	SHARED
+    SHARED
 )
 
 # Add C++ sources.
 target_sources(${LIBRARY_NAME}
-	PRIVATE
-		vec3f.cpp
-		operations.cpp
-		${PUBLIC_HEADERS}
+    PRIVATE
+        vec3f.cpp
+        operations.cpp
+        ${PUBLIC_HEADERS}
 )
 
 install(
@@ -54,21 +54,21 @@ add_library(${PYMODULE_TARGET}
 )
 
 target_sources(${PYMODULE_TARGET}
-	PRIVATE
-		module.cpp
-		bindVec3f.cpp
+    PRIVATE
+        module.cpp
+        bindVec3f.cpp
 )
 
 target_include_directories(${PYMODULE_TARGET}
-	PRIVATE
-		${Python_INCLUDE_DIRS}
+    PRIVATE
+        ${Python_INCLUDE_DIRS}
 )
 
 target_link_libraries(${PYMODULE_TARGET}
-	PRIVATE
-		${LIBRARY_NAME}
-		pybind11
-		${Python_LIBRARIES}
+    PRIVATE
+        ${LIBRARY_NAME}
+        pybind11
+        ${Python_LIBRARIES}
 )
 
 # Strip lib prefix.
@@ -76,13 +76,13 @@ set_target_properties(${PYMODULE_TARGET} PROPERTIES PREFIX "")
 
 # Set actual module name.
 set_target_properties(${PYMODULE_TARGET}
-	PROPERTIES
-		OUTPUT_NAME ${LIBRARY_NAME}
+    PROPERTIES
+        OUTPUT_NAME ${LIBRARY_NAME}
 )
 
 install(
     TARGETS ${PYMODULE_TARGET}
-	LIBRARY DESTINATION pylib
+    LIBRARY DESTINATION pylib
 )
 
 add_custom_command(

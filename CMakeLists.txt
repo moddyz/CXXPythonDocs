@@ -21,9 +21,9 @@ find_program(DOXYGEN_EXECUTABLE
     NAMES doxygen
 )
 if (EXISTS ${DOXYGEN_EXECUTABLE})
-	message(STATUS "Found doxygen executable: ${DOXYGEN_EXECUTABLE}")
+    message(STATUS "Found doxygen executable: ${DOXYGEN_EXECUTABLE}")
 else()
-	message(FATAL_ERROR "doxygen executable found.")
+    message(FATAL_ERROR "doxygen executable found.")
 endif()
 
 # Discover sphinx.
@@ -31,9 +31,9 @@ find_program(SPHINX_EXECUTABLE
     NAMES sphinx-build
 )
 if (EXISTS ${SPHINX_EXECUTABLE})
-	message(STATUS "Found sphinx executable: ${SPHINX_EXECUTABLE}")
+    message(STATUS "Found sphinx executable: ${SPHINX_EXECUTABLE}")
 else()
-	message(FATAL_ERROR "sphinx executable not found.")
+    message(FATAL_ERROR "sphinx executable not found.")
 endif()
 
 #
