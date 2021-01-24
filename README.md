@@ -32,5 +32,4 @@ make install -j8
 
 - Discover and bail cmake configure if breathe is not installed.
 - Sphinx build process should depend on doxygen XML build.
-- Add python bindings
-- C++ and Python side by side view.
+- C++ and Python side by side view
