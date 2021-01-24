@@ -47,6 +47,8 @@ install(
 # Python module.
 #
 
+# A underscore prefix is added to the python module target to
+# differentiate it from the core library.
 set(PYMODULE_TARGET "_${LIBRARY_NAME}")
 
 add_library(${PYMODULE_TARGET}
@@ -74,17 +76,20 @@ target_link_libraries(${PYMODULE_TARGET}
 # Strip lib prefix.
 set_target_properties(${PYMODULE_TARGET} PROPERTIES PREFIX "")
 
-# Set actual module name.
+# Set python module name.
 set_target_properties(${PYMODULE_TARGET}
     PROPERTIES
         OUTPUT_NAME ${LIBRARY_NAME}
 )
 
+# Install python module.
 install(
     TARGETS ${PYMODULE_TARGET}
     LIBRARY DESTINATION pylib
 )
 
+# Create a symlink of the python module under pylib/ so we could import it
+# during sphinx documentation generation.
 add_custom_command(
     TARGET ${PYMODULE_TARGET}
     POST_BUILD

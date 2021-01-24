@@ -1,6 +1,3 @@
-# Set doxygen binary dir directory
-set(DOXYGEN_BINARY_DIR ${CMAKE_BINARY_DIR}/docs/doxygen)
-
 # Configure sphinx conf.py.
 set(SPHINX_BINARY_DIR ${CMAKE_BINARY_DIR}/docs/sphinx)
 configure_file(
