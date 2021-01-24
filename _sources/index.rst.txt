@@ -6,6 +6,8 @@
 Welcome to CXXPythonDocs's documentation!
 =========================================
 
+Source code: https://github.com/moddyz/CXXPythonDocs
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
