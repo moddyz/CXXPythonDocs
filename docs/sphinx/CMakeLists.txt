@@ -20,13 +20,16 @@ foreach(SPHINX_INPUT ${SPHINX_INPUTS})
     message(STATUS ${SPHINX_INPUT})
 endforeach(SPHINX_INPUT)
 
-# Create sphinx command which generates the documentation.
+# Create sphinx command which generates the documentation (also run the doctests).
 add_custom_command(
     OUTPUT
         ${SPHINX_BINARY_DIR}/build/index.html
     COMMAND
         ${CMAKE_COMMAND} -E env "PYTHONPATH=${PROJECT_BINARY_DIR}/pylib:$ENV{PYTHONPATH}"
         ${SPHINX_EXECUTABLE} ${SPHINX_BINARY_DIR} ${SPHINX_BINARY_DIR}/build
+    COMMAND
+        ${CMAKE_COMMAND} -E env "PYTHONPATH=${PROJECT_BINARY_DIR}/pylib:$ENV{PYTHONPATH}"
+        ${SPHINX_EXECUTABLE} -b doctest ${SPHINX_BINARY_DIR} ${SPHINX_BINARY_DIR}/doctest
     WORKING_DIRECTORY
         ${CMAKE_BINARY_DIR}
     MAIN_DEPENDENCY
