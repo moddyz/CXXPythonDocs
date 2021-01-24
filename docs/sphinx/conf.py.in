@@ -29,6 +29,7 @@ author = 'rlei'
 extensions = [
     "breathe",
     "sphinx.ext.autodoc",
+    "sphinx_tabs.tabs",
 ]
 
 breathe_projects = {
