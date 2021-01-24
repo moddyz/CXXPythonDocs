@@ -59,6 +59,7 @@ target_sources(${PYMODULE_TARGET}
     PRIVATE
         module.cpp
         bindVec3f.cpp
+        bindOperations.cpp
 )
 
 target_include_directories(${PYMODULE_TARGET}

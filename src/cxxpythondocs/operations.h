@@ -6,7 +6,7 @@
 
 namespace cxxpythondocs {
 
-/// Add two numbers \p a and \p b and return the sum.
+/// Computes the sum of two integers \p a and \p b.
 ///
 /// \param a The left operand.
 /// \param b The right operand.
