@@ -8,6 +8,8 @@ project(
     LANGUAGES CXX
 )
 
+enable_testing()
+
 #
 # Discover dependencies.
 #
@@ -40,6 +42,6 @@ endif()
 # Add source tree.
 #
 
-add_subdirectory(docs)
 add_subdirectory(thirdparty)
 add_subdirectory(src)
+add_subdirectory(docs)

@@ -1,2 +1,2 @@
 # Recurse subdirectories.
-add_subdirectory(mathTools)
+add_subdirectory(cxxpythondocs)

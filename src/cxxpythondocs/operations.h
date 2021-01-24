@@ -1,6 +1,6 @@
 #pragma once
 
-/// \file mathTools/operations.h
+/// \file operations.h
 ///
 /// A collection of useful math operations.
 

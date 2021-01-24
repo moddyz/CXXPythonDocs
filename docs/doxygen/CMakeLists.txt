@@ -2,7 +2,7 @@
 set(DOXYGEN_BINARY_DIR ${CMAKE_BINARY_DIR}/docs/doxygen)
 
 # Format input files to substitute inside Doxyfile.
-set(INPUTS ${PROJECT_SOURCE_DIR}/src/mathTools)
+set(INPUTS ${PROJECT_SOURCE_DIR}/src/cxxpythondocs)
 string(REPLACE ";" " \\\n" DOXYGEN_INPUTS "${INPUTS}")
 
 # Configure Doxyfile.
