@@ -1,18 +1,15 @@
-name: Build and test
+name: Publish documentation
 
-# Run the jobs for pushes and pull requests targetting main branch.
+# Publish documentation only on push to main.
 on: 
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
 jobs:
 
   # Build and test project.
-  linux-build:
+  publish-docs:
     strategy:
       matrix:
         build:
@@ -46,41 +43,22 @@ jobs:
       - name: Create build directories
         run: |
           mkdir _build
-          mkdir _install
       - name: Configure
         run: |
           cmake -DCMAKE_BUILD_TYPE=${{ matrix.build-type }} \
-                -DCMAKE_INSTALL_PREFIX=../_install \
                 ..
         working-directory: _build
       - name: Build
         run: |
           cmake --build . \
                 --verbose \
-                --target install \
+                --target all \
                 --config ${{ matrix.build-type }}
         working-directory: _build
-
-  # Run automated code formatting checks.
-  check-code-formatting:
-    name: "Check C++ code formatting"
-    runs-on: ubuntu-18.04 
-    steps:
-      - name: Install clang-format
-        run: sudo apt-get install clang-format-10
-      - uses: actions/checkout@v2
-      - name: Run clang-format on source code
-        run: |
-          find . \
-            -name ".git" -prune -o \
-            -path "./thirdparty/*" -prune -o \
-            -name "*.cpp" -type f -exec clang-format -i --verbose {} + -o \
-            -name "*.h" -type f -exec clang-format -i --verbose {} +
-      - name: Check for source differences
-        run: |
-          set +e
-          git diff --color
-          git diff-index --quiet HEAD --; EXIT_CODE=$?
-          set -e
-          if [ $EXIT_CODE -ne 0 ]; then echo "C++ code formatting check failed.  Please run clang-format on *.h and *.cpp, then push your changes."; fi
-          exit $EXIT_CODE
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: _build/docs/sphinx/build
+          CLEAN: true # Automatically remove deleted files from the deploy branch
