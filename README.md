@@ -17,6 +17,7 @@ The following dependencies are mandatory:
 - [Python](https://www.python.org/) 
 - [Doxygen](https://www.doxygen.nl/index.html) and [graphiviz](https://graphviz.org/)
 - [Sphinx](https://www.sphinx-doc.org/) 
+- [Breathe](https://github.com/michaeljones/breathe) 
 
 ## Building
 
