@@ -6,15 +6,15 @@ Vec3f
 
 A vector class with 3 floating point components.
 
-Python
-------
+.. tabs::
 
-.. autoclass:: cxxpythondocs.Vec3f
-  :members:
+  .. tab:: Python
 
-C++
----
+    .. autoclass:: cxxpythondocs.Vec3f
+      :members:
+  
+  .. tab:: C++
 
-.. doxygenclass:: cxxpythondocs::Vec3f
-   :project: CXXPythonDocs
-   :members:
+    .. doxygenclass:: cxxpythondocs::Vec3f
+       :project: CXXPythonDocs
+       :members:
