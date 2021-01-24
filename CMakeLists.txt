@@ -8,8 +8,6 @@ project(
     LANGUAGES CXX
 )
 
-enable_testing()
-
 #
 # Discover dependencies.
 #
