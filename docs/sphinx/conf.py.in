@@ -31,8 +31,10 @@ extensions = [
 ]
 
 breathe_projects = {
-    "@CMAKE_PROJECT_NAME@": "@DOXYGEN_OUTPUT_DIR@/xml",
+    "@CMAKE_PROJECT_NAME@": "@DOXYGEN_BINARY_DIR@/xml",
 }
+
+breathe_default_project = "@CMAKE_PROJECT_NAME@"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

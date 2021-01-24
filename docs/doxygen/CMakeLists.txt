@@ -1,23 +1,27 @@
-# Configure Doxyfile.
+# Set doxygen binary dir directory
+set(DOXYGEN_BINARY_DIR ${CMAKE_BINARY_DIR}/docs/doxygen)
+
+# Format input files to substitute inside Doxyfile.
 set(INPUTS ${PROJECT_SOURCE_DIR}/src/mathTools)
-set(DOXYGEN_OUTPUT_DIR ${CMAKE_BINARY_DIR}/docs/doxygen)
 string(REPLACE ";" " \\\n" DOXYGEN_INPUTS "${INPUTS}")
+
+# Configure Doxyfile.
 configure_file(
 	Doxyfile.in
-	${DOXYGEN_OUTPUT_DIR}/Doxyfile
+	${DOXYGEN_BINARY_DIR}/Doxyfile
 )
 
 # Create doxygen command which produces a file output (in this case the index.xml).
 # This depends on the source Doxyfile.in and configured Doxyfile.
 add_custom_command(
 	COMMAND
-		${DOXYGEN_EXECUTABLE} ${DOXYGEN_OUTPUT_DIR}/Doxyfile
+		${DOXYGEN_EXECUTABLE} ${DOXYGEN_BINARY_DIR}/Doxyfile
 	OUTPUT
-		${DOXYGEN_OUTPUT_DIR}/xml/index.xml
+		${DOXYGEN_BINARY_DIR}/xml/index.xml
 	WORKING_DIRECTORY
-		${CMAKE_BINARY_DIR}
+        ${DOXYGEN_BINARY_DIR}
 	MAIN_DEPENDENCY
-		${DOXYGEN_OUTPUT_DIR}/Doxyfile
+		${DOXYGEN_BINARY_DIR}/Doxyfile
 		Doxyfile.in
 	COMMENT
 		"Generating doxygen XML."
@@ -28,7 +32,7 @@ add_custom_command(
 add_custom_target(
 	doxygen_xml ALL
 	DEPENDS
-		${DOXYGEN_OUTPUT_DIR}/xml/index.xml
+		${DOXYGEN_BINARY_DIR}/xml/index.xml
 )
 
 # XXX: Note that we do not need to install the doxygen XML output.
