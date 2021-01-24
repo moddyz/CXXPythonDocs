@@ -8,6 +8,10 @@ namespace cxxpythondocs {
 class Vec3f
 {
 public:
+    // -----------------------------------------------------------------------
+    /// \name Construction
+    // -----------------------------------------------------------------------
+
     /// Default constructor.
     Vec3f() = default;
 
@@ -36,9 +40,9 @@ public:
     /// \return The y component.
     inline float Y() const { return m_y; }
 
-    /// Read-only accessor for the y component.
+    /// Read-only accessor for the z component.
     ///
-    /// \return The y component.
+    /// \return The z component.
     inline float Z() const { return m_z; }
 
     /// Mutable accessor for the x component.
