@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Install CMake
         run: sudo apt-get install cmake
-      - name: Install CMake
+      - name: Install doxygen
         run: sudo apt-get install doxygen
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
