@@ -26,3 +26,10 @@ mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX="/apps/CXXPythonDocs/" ..
 make install -j8
 ```
+
+## TODOs
+
+- Discover and bail cmake configure if breathe is not installed.
+- Sphinx build process should depend on doxygen XML build.
+- Add python bindings
+- C++ and Python side by side view.
