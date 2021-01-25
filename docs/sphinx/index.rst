@@ -6,6 +6,8 @@
 Welcome to CXXPythonDocs's documentation!
 =========================================
 
+Example documentation build for a project consisting of C++ libraries with python bindings.
+
 Source code: https://github.com/moddyz/CXXPythonDocs
 
 .. toctree::
