@@ -19,4 +19,4 @@ A collection of math operations.
 
   .. tab:: C++
 
-    .. doxygenfunction:: cxxpythondocs::AddIntegers
+    .. doxygenfile:: operations.h
