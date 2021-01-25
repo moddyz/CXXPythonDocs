@@ -11,13 +11,15 @@ Example documentation build for a project consisting of C++ libraries with pytho
 
 ### Dependencies
 
-The following dependencies are mandatory:
+The following dependencies are required:
 - C++ compiler
 - [CMake](https://cmake.org/documentation/) (3.12 or greater)
 - [Python](https://www.python.org/) 
-- [Doxygen](https://www.doxygen.nl/index.html) and [graphiviz](https://graphviz.org/)
+- [Doxygen](https://www.doxygen.nl/index.html)
 - [Sphinx](https://www.sphinx-doc.org/) 
-- [Breathe](https://github.com/michaeljones/breathe) 
+
+The following sphinx plugins are required:
+- [breathe](https://github.com/michaeljones/breathe) 
 - [sphinx-tabs](https://github.com/executablebooks/sphinx-tabs)
 - [Read the Docs](https://github.com/readthedocs/sphinx_rtd_theme) 
 
