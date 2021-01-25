@@ -18,6 +18,8 @@ The following dependencies are mandatory:
 - [Doxygen](https://www.doxygen.nl/index.html) and [graphiviz](https://graphviz.org/)
 - [Sphinx](https://www.sphinx-doc.org/) 
 - [Breathe](https://github.com/michaeljones/breathe) 
+- [sphinx-tabs](https://github.com/executablebooks/sphinx-tabs)
+- [Read the Docs](https://github.com/readthedocs/sphinx_rtd_theme) 
 
 ## Building
 
