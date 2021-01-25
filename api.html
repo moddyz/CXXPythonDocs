@@ -8,17 +8,13 @@
     <title>API Reference &#8212; CXXPythonDocs  documentation</title>
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx_tabs/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
-    <script src="_static/sphinx_tabs/tabs.js"></script>
+    <script src="_static/tabs.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -49,20 +45,7 @@
 <h2>Vec3f<a class="headerlink" href="#vec3f" title="Permalink to this headline">¶</a></h2>
 <p>A vector class with 3 floating point components.</p>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-0-0 docutils container">
-<div class="docutils container">
-<p>Python</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-0-1 docutils container">
-<div class="docutils container">
-<p>C++</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-0 active docutils container">
-<dl class="py class">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><dl class="py class">
 <dt id="cxxpythondocs.Vec3f">
 <em class="property">class </em><code class="sig-prename descclassname">cxxpythondocs.</code><code class="sig-name descname">Vec3f</code><a class="headerlink" href="#cxxpythondocs.Vec3f" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="py method">
@@ -99,9 +82,7 @@
 <span class="go">0.0</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-0-1 docutils container">
-<dl class="cpp class">
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><dl class="cpp class">
 <dt id="_CPPv4N13cxxpythondocs5Vec3fE">
 <span id="_CPPv3N13cxxpythondocs5Vec3fE"></span><span id="_CPPv2N13cxxpythondocs5Vec3fE"></span><span id="cxxpythondocs::Vec3f"></span><span class="target" id="classcxxpythondocs_1_1Vec3f"></span><em class="property">class </em><code class="sig-prename descclassname">cxxpythondocs<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Vec3f</code><a class="headerlink" href="#_CPPv4N13cxxpythondocs5Vec3fE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A vector class with 3 floating-point components. </p>
@@ -199,11 +180,18 @@
 
 </div>
 <div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Operators</p>
+<p class="breathe-sectiondef-title rubric">Linear Algebra Operations</p>
 <dl class="cpp function">
 <dt id="_CPPv4NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f">
 <span id="_CPPv3NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f"></span><span id="_CPPv2NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f"></span><span id="cxxpythondocs::Vec3f::DotProduct__Vec3fCRC"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a3bcfabbe1fcb3026a4b01f8166b6cef5"></span>float <code class="sig-name descname">DotProduct</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N13cxxpythondocs5Vec3fE" title="cxxpythondocs::Vec3f">Vec3f</a> &amp;<em>other</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Compute the dot product of this vector and <code class="docutils literal notranslate"><span class="pre">other</span></code>. </p>
+<p>Example usage: <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cxxpythondocs</span><span class="p">::</span><span class="n">Vec3f</span> <span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+<span class="n">cxxpythondocs</span><span class="p">::</span><span class="n">Vec3f</span> <span class="n">orthoVec</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="nb">float</span> <span class="n">dotProduct</span> <span class="o">=</span> <span class="n">vec</span><span class="o">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">orthoVec</span><span class="p">);</span>
+<span class="k">assert</span><span class="p">(</span><span class="n">dotProduct</span> <span class="o">==</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">);</span>
+</pre></div>
+</div>
+</p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>The dot product. </p>
 </dd>
@@ -218,27 +206,13 @@
 </div>
 </dd></dl>
 
-</div>
-</div>
+</div></div>
 </div>
 <div class="section" id="operations">
 <h2>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
 <p>A collection of math operations.</p>
 <div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-1-0 docutils container">
-<div class="docutils container">
-<p>Python</p>
-</div>
-</div>
-<div class="item sphinx-data-tab-1-1 docutils container">
-<div class="docutils container">
-<p>C++</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-0 active docutils container">
-<dl class="py function">
+<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><dl class="py function">
 <dt id="cxxpythondocs.AddIntegers">
 <code class="sig-prename descclassname">cxxpythondocs.</code><code class="sig-name descname">AddIntegers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">arg1</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#cxxpythondocs.AddIntegers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compute the sum of two integers.</p>
@@ -250,9 +224,7 @@
 <span class="go">3</span>
 </pre></div>
 </div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-1-1 docutils container">
-<dl class="cpp function">
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><dl class="cpp function">
 <dt id="_CPPv4N13cxxpythondocs11AddIntegersEii">
 <span id="_CPPv3N13cxxpythondocs11AddIntegersEii"></span><span id="_CPPv2N13cxxpythondocs11AddIntegersEii"></span><span id="cxxpythondocs::AddIntegers__i.i"></span><span class="target" id="operations_8h_1ae45bda5746af139448222b848345de83"></span>int <code class="sig-prename descclassname">cxxpythondocs<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">AddIntegers</code><span class="sig-paren">(</span>int <em>a</em>, int <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13cxxpythondocs11AddIntegersEii" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Computes the sum of two integers <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. </p>
@@ -268,8 +240,7 @@
 </p>
 </dd></dl>
 
-</div>
-</div>
+</div></div>
 </div>
 </div>
 
