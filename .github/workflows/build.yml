@@ -42,6 +42,8 @@ jobs:
         run: pip install breathe
       - name: Install sphinx-tabs
         run: pip install sphinx-tabs
+      - name: Install sphinx-rtd-theme
+        run: pip install sphinx-rtd-theme
       - uses: actions/checkout@v2
       - name: Create build directories
         run: |
