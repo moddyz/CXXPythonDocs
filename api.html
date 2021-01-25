@@ -14,10 +14,10 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script src="_static/tabs.js"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Vec3f" href="vec3f.html" />
     <link rel="prev" title="Welcome to CXXPythonDocs’s documentation!" href="index.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,6 +26,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="vec3f.html" title="Vec3f"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Welcome to CXXPythonDocs’s documentation!"
              accesskey="P">previous</a> |</li>
@@ -41,206 +44,12 @@
             
   <div class="section" id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="vec3f">
-<h2>Vec3f<a class="headerlink" href="#vec3f" title="Permalink to this headline">¶</a></h2>
-<p>A vector class with 3 floating point components.</p>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Python</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><dl class="py class">
-<dt id="cxxpythondocs.Vec3f">
-<em class="property">class </em><code class="sig-prename descclassname">cxxpythondocs.</code><code class="sig-name descname">Vec3f</code><a class="headerlink" href="#cxxpythondocs.Vec3f" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="py method">
-<dt id="cxxpythondocs.Vec3f.DotProduct">
-<code class="sig-name descname">DotProduct</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#cxxpythondocs.Vec3f" title="cxxpythondocs.Vec3f">cxxpythondocs.Vec3f</a></span></em>, <em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#cxxpythondocs.Vec3f" title="cxxpythondocs.Vec3f">cxxpythondocs.Vec3f</a></span></em><span class="sig-paren">)</span> &#x2192; float<a class="headerlink" href="#cxxpythondocs.Vec3f.DotProduct" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt id="cxxpythondocs.Vec3f.x">
-<em class="property">property </em><code class="sig-name descname">x</code><a class="headerlink" href="#cxxpythondocs.Vec3f.x" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accessor for x component.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="cxxpythondocs.Vec3f.y">
-<em class="property">property </em><code class="sig-name descname">y</code><a class="headerlink" href="#cxxpythondocs.Vec3f.y" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accessor for y component.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="cxxpythondocs.Vec3f.z">
-<em class="property">property </em><code class="sig-name descname">z</code><a class="headerlink" href="#cxxpythondocs.Vec3f.z" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accessor for z component.</p>
-</dd></dl>
-
-</dd></dl>
-
-<p><strong>Example Usage</strong></p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cxxpythondocs</span> <span class="kn">import</span> <span class="n">Vec3f</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span> <span class="o">=</span> <span class="n">Vec3f</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">vec</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">vec</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">vec</span><span class="o">.</span><span class="n">z</span><span class="p">)</span>
-<span class="go">1.0 2.0 3.0</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">vec</span><span class="o">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">Vec3f</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="go">0.0</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><dl class="cpp class">
-<dt id="_CPPv4N13cxxpythondocs5Vec3fE">
-<span id="_CPPv3N13cxxpythondocs5Vec3fE"></span><span id="_CPPv2N13cxxpythondocs5Vec3fE"></span><span id="cxxpythondocs::Vec3f"></span><span class="target" id="classcxxpythondocs_1_1Vec3f"></span><em class="property">class </em><code class="sig-prename descclassname">cxxpythondocs<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">Vec3f</code><a class="headerlink" href="#_CPPv4N13cxxpythondocs5Vec3fE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A vector class with 3 floating-point components. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Construction</p>
-<dl class="cpp function">
-<dt id="_CPPv4N13cxxpythondocs5Vec3f5Vec3fEv">
-<span id="_CPPv3N13cxxpythondocs5Vec3f5Vec3fEv"></span><span id="_CPPv2N13cxxpythondocs5Vec3f5Vec3fEv"></span><span id="cxxpythondocs::Vec3f::Vec3f"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a6d30a3e24eafa0e303ea18115a97f016"></span><code class="sig-name descname">Vec3f</code><span class="sig-paren">(</span><span class="sig-paren">)</span> = default<a class="headerlink" href="#_CPPv4N13cxxpythondocs5Vec3f5Vec3fEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Default constructor. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N13cxxpythondocs5Vec3f5Vec3fEfff">
-<span id="_CPPv3N13cxxpythondocs5Vec3f5Vec3fEfff"></span><span id="_CPPv2N13cxxpythondocs5Vec3f5Vec3fEfff"></span><span id="cxxpythondocs::Vec3f::Vec3f__float.float.float"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a23021d838cb652c19bee2f17688dc7f1"></span><code class="sig-name descname">Vec3f</code><span class="sig-paren">(</span>float <em>x</em>, float <em>y</em>, float <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13cxxpythondocs5Vec3f5Vec3fEfff" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Component-wise constructor. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code>: The x element. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">y</span></code>: The y element. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">z</span></code>: The z element. </p></li>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vec3f.html">Vec3f</a></li>
+<li class="toctree-l1"><a class="reference internal" href="operations.html">Operations</a></li>
 </ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Component accessors</p>
-<dl class="cpp function">
-<dt id="_CPPv4NK13cxxpythondocs5Vec3f1XEv">
-<span id="_CPPv3NK13cxxpythondocs5Vec3f1XEv"></span><span id="_CPPv2NK13cxxpythondocs5Vec3f1XEv"></span><span id="cxxpythondocs::Vec3f::XC"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a1f4c210e8475e1abf692be4409c877b5"></span>float <code class="sig-name descname">X</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13cxxpythondocs5Vec3f1XEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Read-only accessor for the x component. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The x component. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4NK13cxxpythondocs5Vec3f1YEv">
-<span id="_CPPv3NK13cxxpythondocs5Vec3f1YEv"></span><span id="_CPPv2NK13cxxpythondocs5Vec3f1YEv"></span><span id="cxxpythondocs::Vec3f::YC"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a7f29331015e9815531619914693949fc"></span>float <code class="sig-name descname">Y</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13cxxpythondocs5Vec3f1YEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Read-only accessor for the y component. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The y component. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4NK13cxxpythondocs5Vec3f1ZEv">
-<span id="_CPPv3NK13cxxpythondocs5Vec3f1ZEv"></span><span id="_CPPv2NK13cxxpythondocs5Vec3f1ZEv"></span><span id="cxxpythondocs::Vec3f::ZC"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a2e4604f1495afd6125d6893d10293097"></span>float <code class="sig-name descname">Z</code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13cxxpythondocs5Vec3f1ZEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Read-only accessor for the z component. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The z component. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N13cxxpythondocs5Vec3f1XEv">
-<span id="_CPPv3N13cxxpythondocs5Vec3f1XEv"></span><span id="_CPPv2N13cxxpythondocs5Vec3f1XEv"></span><span id="cxxpythondocs::Vec3f::X"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a659d0a5fea75b4b93e8db82400797371"></span>float &amp;<code class="sig-name descname">X</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13cxxpythondocs5Vec3f1XEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Mutable accessor for the x component. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The x component. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N13cxxpythondocs5Vec3f1YEv">
-<span id="_CPPv3N13cxxpythondocs5Vec3f1YEv"></span><span id="_CPPv2N13cxxpythondocs5Vec3f1YEv"></span><span id="cxxpythondocs::Vec3f::Y"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a52a670a05717da7554ad3d9668af970a"></span>float &amp;<code class="sig-name descname">Y</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13cxxpythondocs5Vec3f1YEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Mutable accessor for the y component. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The y component. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N13cxxpythondocs5Vec3f1ZEv">
-<span id="_CPPv3N13cxxpythondocs5Vec3f1ZEv"></span><span id="_CPPv2N13cxxpythondocs5Vec3f1ZEv"></span><span id="cxxpythondocs::Vec3f::Z"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1aa4b02ff7373f636580c209f0f3656658"></span>float &amp;<code class="sig-name descname">Z</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13cxxpythondocs5Vec3f1ZEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Mutable accessor for the z component. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The z component. </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric">Linear Algebra Operations</p>
-<dl class="cpp function">
-<dt id="_CPPv4NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f">
-<span id="_CPPv3NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f"></span><span id="_CPPv2NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f"></span><span id="cxxpythondocs::Vec3f::DotProduct__Vec3fCRC"></span><span class="target" id="classcxxpythondocs_1_1Vec3f_1a3bcfabbe1fcb3026a4b01f8166b6cef5"></span>float <code class="sig-name descname">DotProduct</code><span class="sig-paren">(</span><em class="property">const</em> <a class="reference internal" href="#_CPPv4N13cxxpythondocs5Vec3fE" title="cxxpythondocs::Vec3f">Vec3f</a> &amp;<em>other</em><span class="sig-paren">)</span> <em class="property">const</em><a class="headerlink" href="#_CPPv4NK13cxxpythondocs5Vec3f10DotProductERK5Vec3f" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Compute the dot product of this vector and <code class="docutils literal notranslate"><span class="pre">other</span></code>. </p>
-<p>Example usage: <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cxxpythondocs</span><span class="p">::</span><span class="n">Vec3f</span> <span class="n">vec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
-<span class="n">cxxpythondocs</span><span class="p">::</span><span class="n">Vec3f</span> <span class="n">orthoVec</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">float</span> <span class="n">dotProduct</span> <span class="o">=</span> <span class="n">vec</span><span class="o">.</span><span class="n">DotProduct</span><span class="p">(</span><span class="n">orthoVec</span><span class="p">);</span>
-<span class="k">assert</span><span class="p">(</span><span class="n">dotProduct</span> <span class="o">==</span> <span class="mf">0.0</span><span class="n">f</span><span class="p">);</span>
-</pre></div>
-</div>
-</p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The dot product. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">other</span></code>: The other vector.</p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-</div>
-</dd></dl>
-
-</div></div>
-</div>
-<div class="section" id="operations">
-<h2>Operations<a class="headerlink" href="#operations" title="Permalink to this headline">¶</a></h2>
-<p>A collection of math operations.</p>
-<div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">Python</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">C++</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><dl class="py function">
-<dt id="cxxpythondocs.AddIntegers">
-<code class="sig-prename descclassname">cxxpythondocs.</code><code class="sig-name descname">AddIntegers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">arg0</span><span class="p">:</span> <span class="n">int</span></em>, <em class="sig-param"><span class="n">arg1</span><span class="p">:</span> <span class="n">int</span></em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#cxxpythondocs.AddIntegers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compute the sum of two integers.</p>
-</dd></dl>
-
-<p><strong>Example Usage</strong></p>
-<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">cxxpythondocs</span> <span class="kn">import</span> <span class="n">AddIntegers</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">AddIntegers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="go">3</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><dl class="cpp function">
-<dt id="_CPPv4N13cxxpythondocs11AddIntegersEii">
-<span id="_CPPv3N13cxxpythondocs11AddIntegersEii"></span><span id="_CPPv2N13cxxpythondocs11AddIntegersEii"></span><span id="cxxpythondocs::AddIntegers__i.i"></span><span class="target" id="operations_8h_1ae45bda5746af139448222b848345de83"></span>int <code class="sig-prename descclassname">cxxpythondocs<code class="sig-prename descclassname">::</code></code><code class="sig-name descname">AddIntegers</code><span class="sig-paren">(</span>int <em>a</em>, int <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N13cxxpythondocs11AddIntegersEii" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Computes the sum of two integers <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code>. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>The sum. </p>
-</dd>
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">a</span></code>: The left operand. </p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">b</span></code>: The right operand.</p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-</div></div>
 </div>
 </div>
 
@@ -251,18 +60,12 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">API Reference</a><ul>
-<li><a class="reference internal" href="#vec3f">Vec3f</a></li>
-<li><a class="reference internal" href="#operations">Operations</a></li>
-</ul>
-</li>
-</ul>
-
   <h4>Previous topic</h4>
   <p class="topless"><a href="index.html"
                         title="previous chapter">Welcome to CXXPythonDocs’s documentation!</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="vec3f.html"
+                        title="next chapter">Vec3f</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -290,6 +93,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="vec3f.html" title="Vec3f"
+             >next</a> |</li>
         <li class="right" >
           <a href="index.html" title="Welcome to CXXPythonDocs’s documentation!"
              >previous</a> |</li>
