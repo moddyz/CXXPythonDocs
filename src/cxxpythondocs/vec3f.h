@@ -61,10 +61,18 @@ public:
     inline float& Z() { return m_z; }
 
     // -----------------------------------------------------------------------
-    /// \name Operators
+    /// \name Linear Algebra Operations
     // -----------------------------------------------------------------------
 
     /// Compute the dot product of this vector and \p other.
+    ///
+    /// Example usage:
+    /// \code{.cpp}
+    /// cxxpythondocs::Vec3f vec(1, 2, 3);
+    /// cxxpythondocs::Vec3f orthoVec(-1, -1, 1)
+    /// float dotProduct = vec.DotProduct(orthoVec);
+    /// assert(dotProduct == 0.0f);
+    /// \endcode
     ///
     /// \param other The other vector.
     ///
