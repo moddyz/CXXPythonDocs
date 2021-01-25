@@ -7,5 +7,7 @@ using namespace cxxpythondocs;
 void BindOperations(pybind11::module& module)
 {
     module.def("AddIntegers", &AddIntegers, "Compute the sum of two integers.");
-    module.def("AddFloats", &AddFloats, "Compute the sum of two floating point numbers.");
+    module.def("AddFloats",
+               &AddFloats,
+               "Compute the sum of two floating point numbers.");
 }
