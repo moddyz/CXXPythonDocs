@@ -35,5 +35,5 @@ void BindVec3f(pybind11::module& module)
         pybind11::cpp_function(
             [](Vec3f& o_vector, const float& i_z) { o_vector.Z() = i_z; }),
         "Accessor for z component.");
-    cls.def("DotProduct", &Vec3f::DotProduct);
+    cls.def("DotProduct", &Vec3f::DotProduct, "Compute the dot product of this vector and another." );
 }
