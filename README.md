@@ -9,7 +9,7 @@ Example documentation build for a project consisting of C++ libraries with pytho
 - [Dependencies](#dependencies)
 - [Building](#building)
 
-### Dependencies
+## Dependencies
 
 The following dependencies are required:
 - C++ compiler
